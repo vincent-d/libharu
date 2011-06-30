@@ -427,7 +427,7 @@ HPDF_Page_GetInheritableItem  (HPDF_Page          page,
     if (!obj) {
         HPDF_Pages pages = HPDF_Dict_GetItem (page, "Parent", HPDF_OCLASS_DICT);
         while (pages) {
-            obj = HPDF_Dict_GetItem (page, key, obj_class);
+            obj = HPDF_Dict_GetItem (pages, key, obj_class);
 
             if (obj)
                 break;
